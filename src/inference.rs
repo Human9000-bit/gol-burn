@@ -97,11 +97,9 @@ const SQUARE_SYMBOL: char = '■';
 /// visual feedback during simulation.
 pub fn output(rx: std::sync::mpsc::Receiver<String>) {
     loop {
-        // let message = rx.recv().unwrap();
-        // std::io::stdout().write_all(message.as_bytes()).unwrap();
         match rx.recv() {
             Ok(msg) => {
-                //let _ = Command::new("clear").spawn().unwrap().wait();
+                let _ = Command::new("clear").spawn().unwrap().wait();
                 std::io::stdout().write_all(msg.as_bytes()).unwrap();
                 std::io::stdout().flush().unwrap();
             }
