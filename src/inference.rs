@@ -2,8 +2,6 @@ use std::io::Write;
 
 use burn::{prelude::Backend, tensor::{Bool, Tensor}};
 
-use crate::model::GolModel;
-
 const SQUARE_SYMBOL: char = '■';
 
 pub fn output(rx: std::sync::mpsc::Receiver<String>) {

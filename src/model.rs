@@ -7,7 +7,7 @@ use burn::{
         conv::{Conv2d, Conv2dConfig},
     },
     prelude::Backend,
-    tensor::{Bool, Float, Int, Tensor},
+    tensor::{Bool, Float, Tensor},
 };
 
 #[derive(Module, Debug)]
