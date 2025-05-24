@@ -14,10 +14,10 @@ pub struct Args {
 
     /// Number of iterations to run
     #[arg(short = 'n', long, default_value = "100")]
-    pub iterations: u32,
+    pub iterations: Option<usize>,
 
     /// Symbol representing alive cells
-    #[arg(short = 'a', long, default_value = "#")]
+    #[arg(short = 'a', long, default_value = "X")]
     pub alive_symbol: char,
 }
 
